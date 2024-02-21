@@ -11,6 +11,8 @@ class NewtonianGrav:
         return self.G * center_mass / radius**2
     def escape_velocity(self, center_mass: np.float256, radius: np.float256):
         return np.sqrt(2 * self.G * center_mass / radius)
+    def orbital_velocity(self, center_mass: np.float256, radius: np.float256):
+        return np.sqrt(self.G * center_mass / radius)
     def gravitational_potential_energy(self, mass_1: np.float256, mass_2: np.float256, radius: np.float256):
         return -self.G * (mass_1 * mass_2) / radius
     def gravitational_kinetic_energy(self, mass_1: np.float256, mass_2: np.float256, radius: np.float256):
